@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="default_color">#222222</color>
+    <color name="default_special_color">#5454ff</color>
+    <color name="interaction_color">#FFFFFFFF</color>
+    <color name="special_interaction_color">#FF8c00</color>
+
+</resources>
