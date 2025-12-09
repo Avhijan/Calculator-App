@@ -204,13 +204,11 @@ class MainActivity : AppCompatActivity()
             .replace("X", "*")
 
         val expr = net.objecthunter.exp4j.ExpressionBuilder(formattedExpression)
-            .operator(PowerOperator()) // Pass an instance of the class here
+            .operator(PowerOperator())
             .build()
 
-        // Calculate the result
         val result = expr.evaluate()
 
-        // Format the result cleanly (e.g., remove .0 from whole numbers)
         return if (result % 1.0 == 0.0)
         {
             result.toLong().toString()
@@ -224,9 +222,7 @@ class MainActivity : AppCompatActivity()
 }
 class PowerOperator : Operator("^", 2, true, PRECEDENCE_POWER) {
 
-    // The apply method is where the calculation logic goes
     override fun apply(args: DoubleArray): Double {
-        // args[0] is the base, args[1] is the exponent
         return args[0].pow(args[1])
     }
 }
